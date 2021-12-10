@@ -7,28 +7,6 @@ import numpy as np
 import argparse
 import pickle
 '''
-python tr_causal_agg.py --loop 10 -m st
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 0
-python train_causal.py --loop 1 -m cape_cau -d NI --i_t 1
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 2
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 3
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 4
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 5
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 6
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 7
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 8
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 9
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 10
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 11
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 12
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 13
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 14
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 15
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 16
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 17
-python tr_causal_agg.py --loop 1 -m gatetcn2 -d IND-10143 --save_ite --i_t 18
-
-python tr_causal_agg.py --loop 1 -m nob
 
 '''
 parser = argparse.ArgumentParser()
