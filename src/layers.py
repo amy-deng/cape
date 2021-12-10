@@ -32,9 +32,7 @@ class GraphConvLayer(Module):
             self.register_parameter('bias', None)
 
     def forward(self, feature, adj):
-        # print(self.weight.shape,'====',feature.type(),self.weight.type())
         support = torch.matmul(feature, self.weight)
-        # print(adj.shape, support.shape,'=======================')
         output = torch.matmul(adj, support)
 
         if self.bias is not None:
@@ -136,8 +134,6 @@ class Attention(nn.Module):
             query = self.linear_in(query)
             query = query.reshape(batch_size, output_len, dimensions)
 
-        # TODO: Include mask on PADDING_INDEX?
-
         # (batch_size, output_len, dimensions) * (batch_size, query_len, dimensions) ->
         # (batch_size, output_len, query_len)
         attention_scores = torch.bmm(query, context.transpose(1, 2).contiguous())
@@ -172,8 +168,6 @@ class PositionwiseFeedForward(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        # 234,200
-        # print(x.shape,'=====')
         if len(x.size()) < 3:
             x = x.view(1,x.size(0),x.size(1))
         residual = x
